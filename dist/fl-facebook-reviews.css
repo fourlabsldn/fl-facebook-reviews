@@ -1,23 +1,23 @@
 @charset "UTF-8";
-.fl-fr_post,
-.fl-fr_header,
-.fl-fr_header-image,
-.fl-fr_header-text,
-.fl-fr_header-text-top,
-.fl-fr_header-text-top-name,
-.fl-fr_header-text-top-actionTarget,
-.fl-fr_header-text-stars,
-.fl-fr_header-text-bottom,
-.fl-fr_icon icon-world,
-.fl-fr_ExpansibleTextBox,
-.fl-fr_ExpansibleTextBox-seeMore {
+.fl-fr_Post-post,
+.fl-fr_Post-header,
+.fl-fr_Post-header-image,
+.fl-fr_Post-header-text,
+.fl-fr_Post-header-text-top,
+.fl-fr_Post-header-text-top-name,
+.fl-fr_Post-header-text-top-actionTarget,
+.fl-fr_Post-header-text-stars,
+.fl-fr_Post-header-text-bottom,
+.fl-fr_Post-icon icon-world,
+.fl-fr_Post-ExpansibleTextBox,
+.fl-fr_Post-ExpansibleTextBox-seeMore {
   margin: 0;
   padding: 0;
   font-size: inherit;
   font-family: inherit;
   text-decoration: none; }
 
-.fl-fr_post {
+.fl-fr_Post-post {
   display: block;
   max-width: 470px;
   padding: 12px;
@@ -28,7 +28,7 @@
   font-size: 14px;
   line-height: 1.38em; }
 
-.fl-fr_header {
+.fl-fr_Post-header {
   color: #90949c;
   display: -webkit-box;
   display: -webkit-flex;
@@ -44,13 +44,13 @@
   position: relative;
   padding-bottom: 6px; }
 
-.fl-fr_header-image {
+.fl-fr_Post-header-image {
   width: 40px;
   height: 40px;
   display: block;
   padding-right: 8px; }
 
-.fl-fr_header-text {
+.fl-fr_Post-header-text {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,17 +63,17 @@
       -ms-flex-align: stretch;
           align-items: stretch; }
 
-.fl-fr_header-text-top {
+.fl-fr_Post-header-text-top {
   margin-bottom: 2px; }
 
-.fl-fr_header-text-top-name {
+.fl-fr_Post-header-text-top-name {
   font-weight: bold;
   color: #4254a0; }
 
-.fl-fr_header-text-top-actionTarget {
+.fl-fr_Post-header-text-top-actionTarget {
   color: #4254a0; }
 
-.fl-fr_header-text-stars {
+.fl-fr_Post-header-text-stars {
   font-size: .75em;
   color: #fff;
   background-color: #558eff;
@@ -84,18 +84,18 @@
   padding: .1em .5em;
   margin-bottom: .2em;
   display: inline-block; }
-  .fl-fr_header-text-stars:after {
+  .fl-fr_Post-header-text-stars:after {
     content: '★';
     font-size: 1em;
     margin-left: -.2em;
     margin-bottom: .4em; }
 
-.fl-fr_header-text-bottom {
+.fl-fr_Post-header-text-bottom {
   font-family: inherit;
   font-size: 12px;
   line-height: 1.34em; }
 
-.fl-fr_header-arrowDown, .fl-fr_header-arrowDown * {
+.fl-fr_Post-header-arrowDown, .fl-fr_Post-header-arrowDown * {
   display: block;
   fill: #90949c;
   position: absolute;
@@ -103,16 +103,16 @@
   right: 0;
   font-size: 28px; }
 
-.fl-fr_header-text-globe,
-.fl-fr_header-text-globe * {
+.fl-fr_Post-header-text-globe,
+.fl-fr_Post-header-text-globe * {
   fill: #90949c; }
 
-.fl-fr_ExpansibleTextBox {
+.fl-fr_Post-ExpansibleTextBox {
   color: #1d2129;
   font-size: 14px;
   line-height: 1.38em; }
 
-.fl-fr_ExpansibleTextBox-seeMore {
+.fl-fr_Post-ExpansibleTextBox-seeMore {
   color: #4254a0;
   display: block;
   cursor: pointer; }

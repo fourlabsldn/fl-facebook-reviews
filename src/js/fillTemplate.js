@@ -2,7 +2,7 @@
 import constants from './constants';
 import ExpansibleTextBox from './ExpansibleTextBox';
 const maxCharacters = 142;
-
+const CSS_PREFIX = 'Post';
 /**
  * @method fillTemplate
  * @param  {Object} review
@@ -18,36 +18,37 @@ export default function fillTemplate(review, modulePrefix) {
   const slvUrl = 'https://www.facebook.com/slvglobal';
   const slvReviewsUrl = `${slvUrl}/reviews`;
 
+  const cssPrefix = `${modulePrefix}_${CSS_PREFIX}`;
   const postStr = `
-  <div class="${modulePrefix}_post">
-    <div class="${modulePrefix}_header">
-      <img class="${modulePrefix}_header-image"src="${reviewUserPic}" alt="">
-      <div class="${modulePrefix}_header-text">
-        <span class="${modulePrefix}_header-text-top">
-          <a class="${modulePrefix}_header-text-top-name" href=${reviewUserUrl}>
+  <div class="${cssPrefix}-post">
+    <div class="${cssPrefix}-header">
+      <img class="${cssPrefix}-header-image"src="${reviewUserPic}" alt="">
+      <div class="${cssPrefix}-header-text">
+        <span class="${cssPrefix}-header-text-top">
+          <a class="${cssPrefix}-header-text-top-name" href=${reviewUserUrl}>
             ${reviewUserName}
           </a>
           reviewed
-          <a class="${modulePrefix}_header-text-top-actionTarget" href="${slvUrl}">
+          <a class="${cssPrefix}-header-text-top-actionTarget" href="${slvUrl}">
             SLV
           </a>
             –
-          <a class="${modulePrefix}_header-text-stars" href="${slvReviewsUrl}">
+          <a class="${cssPrefix}-header-text-stars" href="${slvReviewsUrl}">
             ${reviewStars}
           </a>
         </span>
-        <span class="${modulePrefix}_header-text-bottom">
+        <span class="${cssPrefix}-header-text-bottom">
           ${constants.monthNames[new Date(reviewDate).getMonth()]}
           ${new Date(reviewDate).getDate()}
-          ${constants.globeIcon}
+          <span class="${cssPrefix}-header-text-globe">${constants.globeIcon}</span>
         </span>
       </div>
-      ${constants.arrowDownIcon}
+      <span class="${cssPrefix}-header-arrowDown">${constants.arrowDownIcon}</span>
     </div>
   </div>`;
 
   const post = compile(postStr);
-  const reviewTextBox = new ExpansibleTextBox(reviewText, maxCharacters, modulePrefix);
+  const reviewTextBox = new ExpansibleTextBox(reviewText, maxCharacters, cssPrefix);
   post.appendChild(reviewTextBox.getBox());
   return post;
 }

@@ -1,0 +1,19 @@
+@mixin starBadge() {
+  font-size: .75em;
+  color: $c-bg;
+  background-color: $c-star-bg;
+  border-radius: 10px;
+  vertical-align: middle;
+  line-height: 1.3em;
+
+  padding: .1em .5em;
+  margin-bottom: .2em;
+  display: inline-block;
+
+  &:after {
+    content: '★';
+    font-size: 1em;
+    margin-left: -.2em;
+    margin-bottom: .4em;
+  }
+}

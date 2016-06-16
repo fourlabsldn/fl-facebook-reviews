@@ -4,7 +4,7 @@ export default class ExpansibleTextBox {
     if (typeof text !== 'string') { throw new Error('Text is not string'); }
     this.text = text;
     this.maxCharacters = maxCharacters;
-    const cssPrefix = `${modulePrefix}_${CLASS_PREFIX}`;
+    const cssPrefix = `${modulePrefix}-${CLASS_PREFIX}`;
 
     this.container = document.createElement('p');
     this.container.classList.add(`${cssPrefix}`);

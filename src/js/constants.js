@@ -15,7 +15,6 @@ export default {
   ],
   globeIcon: `
   <svg
-     class="fl-fr_header-text-globe"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -49,7 +48,7 @@ export default {
     </g>
   </svg>`,
   arrowDownIcon: `
-  <svg class="fl-fr_header-arrowDown" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 1080 1080" enable-background="new 0 0 1080 1080" xml:space="preserve">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px" height="17px" viewBox="0 0 1080 1080" enable-background="new 0 0 1080 1080" xml:space="preserve">
       <path fill="#9B9B9B" d="M878.767,410.955L573.344,726.237c-7.79,8.048-18.167,12.085-28.544,12.085
             c-9.963,0-19.94-3.727-27.652-11.206L201.852,421.694c-15.773-15.269-16.174-40.423-0.906-56.209
             c15.307-15.76,40.462-16.148,56.209-0.88l286.751,277.758l277.771-286.738c15.281-15.76,40.475-16.148,56.196-0.88
