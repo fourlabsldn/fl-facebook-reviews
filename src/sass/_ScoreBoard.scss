@@ -33,6 +33,7 @@
   width: 230px;
   padding: $s-scoreBoard-padding;
   border: 1px solid $c-border;
+  margin-bottom: 10px;
 }
 
 .fl-fr_ScoreBoard-header {
@@ -78,16 +79,19 @@
   }
 }
 
+.fl-fr_ScoreBoard-body-reviewCountStarScore-bar {
+  content: ' ';
+  display: inline-block;
+  min-width: .5em;
+  height: .5em;
+  background-color: $c-star-bg;
+  border-radius: .5em;
+  margin-right: 8px;
+  margin-top: .4em;
+}
+
 .fl-fr_ScoreBoard-body-reviewCountStarScore-reviews {
-  &::before {
-    content: ' ';
-    display: inline-block;
-    width: 20px;
-    height: .5em;
-    background-color: $c-star-bg;
-    border-radius: .5em;
-    margin-right: 8px;
-  }
+
 }
 
 .fl-fr_ScoreBoard-body-reviewCountStarScore {

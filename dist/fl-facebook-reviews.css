@@ -44,7 +44,7 @@
   display: block;
   max-width: 470px;
   padding: 12px;
-  margin: 10px 0;
+  margin: 0 0 10px;
   background-color: #fff;
   border: 1px solid #d0d1d5; }
 
@@ -170,7 +170,8 @@
   background-color: white;
   width: 230px;
   padding: 16px;
-  border: 1px solid #d0d1d5; }
+  border: 1px solid #d0d1d5;
+  margin-bottom: 10px; }
 
 .fl-fr_ScoreBoard-header {
   display: -webkit-box;
@@ -229,14 +230,15 @@
   .fl-fr_ScoreBoard-body-reviewCountStarScore-stars::after {
     content: ' stars'; }
 
-.fl-fr_ScoreBoard-body-reviewCountStarScore-reviews::before {
+.fl-fr_ScoreBoard-body-reviewCountStarScore-bar {
   content: ' ';
   display: inline-block;
-  width: 20px;
+  min-width: .5em;
   height: .5em;
   background-color: #558eff;
   -webkit-border-radius: .5em;
           border-radius: .5em;
-  margin-right: 8px; }
+  margin-right: 8px;
+  margin-top: .4em; }
 
 /*# sourceMappingURL=fl-facebook-reviews.css.map */

@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
-import constants from './constants';
+import constants from './utils/constants';
+import compile from './utils/compile';
 import ExpansibleTextBox from './ExpansibleTextBox';
 const maxCharacters = 142;
 const CSS_PREFIX = 'Post';
@@ -58,10 +59,4 @@ export default class Post {
   getContainer() {
     return this.post;
   }
-}
-
-function compile(str) {
-  const container = document.createElement('div');
-  container.innerHTML = str;
-  return container.children[0];
 }
