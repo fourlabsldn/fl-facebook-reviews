@@ -4,16 +4,16 @@ $c-link-text: #4254a0;
 $c-body-text: #1d2129;
 $c-unconspicuous-text: #90949c;
 $c-star-bg: #558eff;
+$c-border: #d0d1d5;
 
 // Sizes
-$base: 1px;
 $s-body-text: 14px;
 $s-body-text-line-height: 1.38em;
 $s-unconspicuouse-text: 12px;
 $s-unconspicuouse-text-line-height: 1.34em;
 $s-box-padding: 12px;
 
-.fl-fr_container,
+.fl-fr_post,
 .fl-fr_header,
 .fl-fr_header-image,
 .fl-fr_header-text,
@@ -29,12 +29,14 @@ $s-box-padding: 12px;
   padding: 0;
 }
 
-.fl-fr_container {
+.fl-fr_post {
   display: block;
   max-width: 470px;
   padding: $s-box-padding;
+  margin: 10px 0;
 
   background-color: $c-bg;
+  border: 1px solid $c-border;
 
   font-family: helvetica, arial, sans-serif;
   font-size: $s-body-text;
@@ -111,17 +113,18 @@ $s-box-padding: 12px;
   line-height: $s-unconspicuouse-text-line-height;
 }
 
-.fl-fr_header-arrowDown {
+.fl-fr_header-arrowDown, .fl-fr_header-arrowDown * {
   display: block;
-  color: $c-unconspicuous-text;
+  fill: $c-unconspicuous-text;
   position: absolute;
   top: -2px;
   right: 0;
   font-size: $s-body-text * 2;
 }
 
-.fl-fr_icon icon-world {
-
+.fl-fr_header-text-globe,
+.fl-fr_header-text-globe * {
+  fill: $c-unconspicuous-text;
 }
 
 .fl-fr_body-text {
