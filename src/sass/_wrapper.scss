@@ -1,12 +1,11 @@
 @mixin starBadge() {
-  font-size: .75em;
   color: $c-bg;
   background-color: $c-star-bg;
-  border-radius: 10px;
+  border-radius: 1em;
   vertical-align: middle;
   line-height: 1.3em;
 
-  padding: .1em .5em;
+  padding: 0.3em .7em;
   margin-bottom: .2em;
   display: inline-block;
 
@@ -21,6 +20,7 @@
 .fl-fr {
   display: flex;
   flex-flow: row wrap;
+  align-items: flex-start;
 
   font-family: $f-family;
   font-size: $s-body-text;

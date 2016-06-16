@@ -7,6 +7,10 @@
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-family: helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 1.38em; }
@@ -90,16 +94,16 @@
   color: #4254a0; }
 
 .fl-fr_Post-header-text-stars {
-  font-size: .75em;
   color: #fff;
   background-color: #558eff;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
+  -webkit-border-radius: 1em;
+          border-radius: 1em;
   vertical-align: middle;
   line-height: 1.3em;
-  padding: .1em .5em;
+  padding: 0.3em .7em;
   margin-bottom: .2em;
-  display: inline-block; }
+  display: inline-block;
+  font-size: .7em; }
   .fl-fr_Post-header-text-stars:after {
     content: '★';
     font-size: 1em;
@@ -164,6 +168,75 @@
 
 .fl-fr_ScoreBoard {
   background-color: white;
-  padding: 12px; }
+  width: 230px;
+  padding: 16px;
+  border: 1px solid #d0d1d5; }
+
+.fl-fr_ScoreBoard-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d0d1d5; }
+
+.fl-fr_ScoreBoard-header-mainScore {
+  color: #fff;
+  background-color: #558eff;
+  -webkit-border-radius: 1em;
+          border-radius: 1em;
+  vertical-align: middle;
+  line-height: 1.3em;
+  padding: 0.3em .7em;
+  margin-bottom: .2em;
+  display: inline-block;
+  font-size: 20px;
+  margin-right: .5em; }
+  .fl-fr_ScoreBoard-header-mainScore:after {
+    content: '★';
+    font-size: 1em;
+    margin-left: -.2em;
+    margin-bottom: .4em; }
+
+.fl-fr_ScoreBoard-header-scoreDetails {
+  font-size: 12px;
+  line-height: 1.34em;
+  color: #4b4f56;
+  padding-top: .2em; }
+
+.fl-fr_ScoreBoard-header-scoreDetails-starCount,
+.fl-fr_ScoreBoard-header-scoreDetails-reviewCount {
+  display: block; }
+
+.fl-fr_ScoreBoard-body {
+  color: #90949c;
+  padding-top: 16px; }
+
+.fl-fr_ScoreBoard-body-reviewCountStarScore {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+
+.fl-fr_ScoreBoard-body-reviewCountStarScore-stars {
+  padding-right: 1em; }
+  .fl-fr_ScoreBoard-body-reviewCountStarScore-stars::after {
+    content: ' stars'; }
+
+.fl-fr_ScoreBoard-body-reviewCountStarScore-reviews::before {
+  content: ' ';
+  display: inline-block;
+  width: 20px;
+  height: .5em;
+  background-color: #558eff;
+  -webkit-border-radius: .5em;
+          border-radius: .5em;
+  margin-right: 8px; }
 
 /*# sourceMappingURL=fl-facebook-reviews.css.map */

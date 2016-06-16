@@ -67,6 +67,7 @@
 
 .fl-fr_Post-header-text-stars {
   @include starBadge();
+  font-size: .7em;
 }
 
 .fl-fr_Post-header-text-bottom {

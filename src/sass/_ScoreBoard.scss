@@ -30,43 +30,64 @@
 
 .fl-fr_ScoreBoard {
   background-color: white;
-  padding: $s-box-padding;
+  width: 230px;
+  padding: $s-scoreBoard-padding;
+  border: 1px solid $c-border;
 }
 
 .fl-fr_ScoreBoard-header {
-
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: $s-scoreBoard-padding;
+  border-bottom: 1px solid $c-border;
 }
 
 .fl-fr_ScoreBoard-header-mainScore {
-
+  @include starBadge();
+  font-size: 20px;
+  margin-right: .5em;
 }
 
 .fl-fr_ScoreBoard-header-scoreDetails {
-
+  font-size: $s-unconspicuouse-text;
+  line-height: $s-unconspicuouse-text-line-height;
+  color: $c-light-body-text;
+  padding-top: .2em;
 }
 
-.fl-fr_ScoreBoard-header-scoreDetails-starCount {
-
-}
-
+.fl-fr_ScoreBoard-header-scoreDetails-starCount,
 .fl-fr_ScoreBoard-header-scoreDetails-reviewCount {
-
+  display: block;
 }
 
 .fl-fr_ScoreBoard-body {
-
+  color: $c-unconspicuous-text;
+  padding-top: $s-scoreBoard-padding;
 }
 
 .fl-fr_ScoreBoard-body-reviewCountStarScore {
-
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .fl-fr_ScoreBoard-body-reviewCountStarScore-stars {
+  padding-right: 1em;
 
+  &::after {
+    content: ' stars';
+  }
 }
 
 .fl-fr_ScoreBoard-body-reviewCountStarScore-reviews {
-
+  &::before {
+    content: ' ';
+    display: inline-block;
+    width: 20px;
+    height: .5em;
+    background-color: $c-star-bg;
+    border-radius: .5em;
+    margin-right: 8px;
+  }
 }
 
 .fl-fr_ScoreBoard-body-reviewCountStarScore {
