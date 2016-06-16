@@ -1,0 +1,136 @@
+// Colors
+$c-bg: #fff;
+$c-link-text: #4254a0;
+$c-body-text: #1d2129;
+$c-unconspicuous-text: #90949c;
+$c-star-bg: #558eff;
+
+// Sizes
+$base: 1px;
+$s-body-text: 14px;
+$s-body-text-line-height: 1.38em;
+$s-unconspicuouse-text: 12px;
+$s-unconspicuouse-text-line-height: 1.34em;
+$s-box-padding: 12px;
+
+.fl-fr_container,
+.fl-fr_header,
+.fl-fr_header-image,
+.fl-fr_header-text,
+.fl-fr_header-text-top,
+.fl-fr_header-text-top-name,
+.fl-fr_header-text-top-actionTarget,
+.fl-fr_header-text-stars,
+.fl-fr_header-text-bottom,
+.fl-fr_icon icon-world,
+.fl-fr_body-text,
+.fl-fr_body-text-seeMore {
+  margin: 0;
+  padding: 0;
+}
+
+.fl-fr_container {
+  display: block;
+  max-width: 470px;
+  padding: $s-box-padding;
+
+  background-color: $c-bg;
+
+  font-family: helvetica, arial, sans-serif;
+  font-size: $s-body-text;
+  line-height: $s-body-text-line-height;
+}
+
+.fl-fr_header {
+  color: $c-unconspicuous-text;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+
+  position: relative;
+  padding-bottom: 6px;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.fl-fr_header-image {
+  width: 40px;
+  height: 40px;
+  display: block;
+  padding-right: 8px;
+}
+
+.fl-fr_header-text {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.fl-fr_header-text-top {
+  margin-bottom: 2px;
+}
+
+.fl-fr_header-text-top-name {
+  font-weight: bold;
+  color: $c-link-text;
+}
+
+.fl-fr_header-text-top-actionTarget {
+  color: $c-link-text;
+}
+
+.fl-fr_header-text-stars {
+  font-size: .75em;
+  color: $c-bg;
+  background-color: $c-star-bg;
+  border-radius: 10px;
+  vertical-align: middle;
+  line-height: 1.3em;
+
+  padding: .1em .5em;
+  margin-bottom: .2em;
+  display: inline-block;
+
+  &:after {
+    content: '★';
+    font-size: 1em;
+    margin-left: -.2em;
+    margin-bottom: .4em;
+  }
+}
+
+.fl-fr_header-text-bottom {
+  font-family: inherit;
+  font-size: $s-unconspicuouse-text;
+  line-height: $s-unconspicuouse-text-line-height;
+}
+
+.fl-fr_header-arrowDown {
+  display: block;
+  color: $c-unconspicuous-text;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  font-size: $s-body-text * 2;
+}
+
+.fl-fr_icon icon-world {
+
+}
+
+.fl-fr_body-text {
+  color: $c-body-text;
+  font-size: $s-body-text;
+  line-height: $s-body-text-line-height;
+}
+
+.fl-fr_body-text-seeMore {
+  color: $c-link-text;
+  display: block;
+}

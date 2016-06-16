@@ -1,0 +1,116 @@
+@charset "UTF-8";
+.fl-fr_container,
+.fl-fr_header,
+.fl-fr_header-image,
+.fl-fr_header-text,
+.fl-fr_header-text-top,
+.fl-fr_header-text-top-name,
+.fl-fr_header-text-top-actionTarget,
+.fl-fr_header-text-stars,
+.fl-fr_header-text-bottom,
+.fl-fr_icon icon-world,
+.fl-fr_body-text,
+.fl-fr_body-text-seeMore {
+  margin: 0;
+  padding: 0; }
+
+.fl-fr_container {
+  display: block;
+  max-width: 470px;
+  padding: 12px;
+  background-color: #fff;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.38em; }
+
+.fl-fr_header {
+  color: #90949c;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  padding-bottom: 6px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+.fl-fr_header-image {
+  width: 40px;
+  height: 40px;
+  display: block;
+  padding-right: 8px; }
+
+.fl-fr_header-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+.fl-fr_header-text-top {
+  margin-bottom: 2px; }
+
+.fl-fr_header-text-top-name {
+  font-weight: bold;
+  color: #4254a0; }
+
+.fl-fr_header-text-top-actionTarget {
+  color: #4254a0; }
+
+.fl-fr_header-text-stars {
+  font-size: .75em;
+  color: #fff;
+  background-color: #558eff;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  vertical-align: middle;
+  line-height: 1.3em;
+  padding: .1em .5em;
+  margin-bottom: .2em;
+  display: inline-block; }
+  .fl-fr_header-text-stars:after {
+    content: '★';
+    font-size: 1em;
+    margin-left: -.2em;
+    margin-bottom: .4em; }
+
+.fl-fr_header-text-bottom {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.34em; }
+
+.fl-fr_header-arrowDown {
+  display: block;
+  color: #90949c;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  font-size: 28px; }
+
+.fl-fr_body-text {
+  color: #1d2129;
+  font-size: 14px;
+  line-height: 1.38em; }
+
+.fl-fr_body-text-seeMore {
+  color: #4254a0;
+  display: block; }
+
+/*# sourceMappingURL=fl-facebook-reviews.css.map */
