@@ -9,10 +9,13 @@
 .fl-fr_header-text-stars,
 .fl-fr_header-text-bottom,
 .fl-fr_icon icon-world,
-.fl-fr_body-text,
-.fl-fr_body-text-seeMore {
+.fl-fr_ExpansibleTextBox,
+.fl-fr_ExpansibleTextBox-seeMore {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none; }
 
 .fl-fr_post {
   display: block;
@@ -39,10 +42,7 @@
       -ms-flex-align: stretch;
           align-items: stretch;
   position: relative;
-  padding-bottom: 6px;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit; }
+  padding-bottom: 6px; }
 
 .fl-fr_header-image {
   width: 40px;
@@ -61,10 +61,7 @@
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
-          align-items: stretch;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit; }
+          align-items: stretch; }
 
 .fl-fr_header-text-top {
   margin-bottom: 2px; }
@@ -110,13 +107,14 @@
 .fl-fr_header-text-globe * {
   fill: #90949c; }
 
-.fl-fr_body-text {
+.fl-fr_ExpansibleTextBox {
   color: #1d2129;
   font-size: 14px;
   line-height: 1.38em; }
 
-.fl-fr_body-text-seeMore {
+.fl-fr_ExpansibleTextBox-seeMore {
   color: #4254a0;
-  display: block; }
+  display: block;
+  cursor: pointer; }
 
 /*# sourceMappingURL=fl-facebook-reviews.css.map */

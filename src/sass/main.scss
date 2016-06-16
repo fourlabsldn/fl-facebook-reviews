@@ -23,10 +23,13 @@ $s-box-padding: 12px;
 .fl-fr_header-text-stars,
 .fl-fr_header-text-bottom,
 .fl-fr_icon icon-world,
-.fl-fr_body-text,
-.fl-fr_body-text-seeMore {
+.fl-fr_ExpansibleTextBox,
+.fl-fr_ExpansibleTextBox-seeMore {
   margin: 0;
   padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none;
 }
 
 .fl-fr_post {
@@ -51,10 +54,6 @@ $s-box-padding: 12px;
 
   position: relative;
   padding-bottom: 6px;
-
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
 }
 
 .fl-fr_header-image {
@@ -68,10 +67,6 @@ $s-box-padding: 12px;
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
-
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
 }
 
 .fl-fr_header-text-top {
@@ -127,13 +122,14 @@ $s-box-padding: 12px;
   fill: $c-unconspicuous-text;
 }
 
-.fl-fr_body-text {
+.fl-fr_ExpansibleTextBox {
   color: $c-body-text;
   font-size: $s-body-text;
   line-height: $s-body-text-line-height;
 }
 
-.fl-fr_body-text-seeMore {
+.fl-fr_ExpansibleTextBox-seeMore {
   color: $c-link-text;
   display: block;
+  cursor: pointer;
 }

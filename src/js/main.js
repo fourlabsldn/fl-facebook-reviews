@@ -2,6 +2,7 @@
 /* eslint-disable quote-props, max-len*/
 import fillTemplate from './fillTemplate';
 
+const MODULE_PREFIX = 'fl-fr';
 xController((xdiv) => {
   const loadedData = {
     'summary': {
@@ -27,5 +28,6 @@ xController((xdiv) => {
       },
     }],
   };
-  xdiv.innerHTML = fillTemplate(loadedData.reviews[0]);
-})
+  xdiv.appendChild(fillTemplate(loadedData.reviews[0], MODULE_PREFIX));
+  xdiv.appendChild(fillTemplate(loadedData.reviews[0], MODULE_PREFIX));
+});
