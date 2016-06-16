@@ -1,6 +1,6 @@
 /* globals xController */
 /* eslint-disable quote-props, max-len*/
-import fillTemplate from './fillTemplate';
+import Post from './Post';
 
 const MODULE_PREFIX = 'fl-fr';
 xController((xdiv) => {
@@ -48,6 +48,7 @@ xController((xdiv) => {
   };
 
   loadedData.reviews.forEach((review) => {
-    xdiv.appendChild(fillTemplate(review, MODULE_PREFIX));
+    const post = new Post(review, MODULE_PREFIX);
+    xdiv.appendChild(post.getContainer());
   });
 });
