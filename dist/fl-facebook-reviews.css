@@ -1,4 +1,22 @@
 @charset "UTF-8";
+.fl-fr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.38em; }
+
+.fl-fr_divider {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent; }
+
 .fl-fr_Post-post,
 .fl-fr_Post-header,
 .fl-fr_Post-header-image,
@@ -15,18 +33,16 @@
   padding: 0;
   font-size: inherit;
   font-family: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  line-height: inherit; }
 
-.fl-fr_Post-post {
+.fl-fr_Post {
   display: block;
   max-width: 470px;
   padding: 12px;
   margin: 10px 0;
   background-color: #fff;
-  border: 1px solid #d0d1d5;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.38em; }
+  border: 1px solid #d0d1d5; }
 
 .fl-fr_Post-header {
   color: #90949c;
@@ -116,5 +132,38 @@
   color: #4254a0;
   display: block;
   cursor: pointer; }
+
+.fl-fr_ScoreBoard,
+.fl-fr_ScoreBoard-header,
+.fl-fr_ScoreBoard-header-mainScore,
+.fl-fr_ScoreBoard-header-scoreDetails,
+.fl-fr_ScoreBoard-header-scoreDetails-starCount,
+.fl-fr_ScoreBoard-header-scoreDetails-reviewCount,
+.fl-fr_ScoreBoard-body,
+.fl-fr_ScoreBoard-body-reviewCountStarScore,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-stars,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-reviews,
+.fl-fr_ScoreBoard-body-reviewCountStarScore,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-stars,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-reviews,
+.fl-fr_ScoreBoard-body-reviewCountStarScore,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-stars,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-reviews,
+.fl-fr_ScoreBoard-body-reviewCountStarScore,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-stars,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-reviews,
+.fl-fr_ScoreBoard-body-reviewCountStarScore,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-stars,
+.fl-fr_ScoreBoard-body-reviewCountStarScore-reviews {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  line-height: inherit; }
+
+.fl-fr_ScoreBoard {
+  background-color: white;
+  padding: 12px; }
 
 /*# sourceMappingURL=fl-facebook-reviews.css.map */

@@ -17,3 +17,19 @@
     margin-bottom: .4em;
   }
 }
+
+.fl-fr {
+  display: flex;
+  flex-flow: row wrap;
+
+  font-family: $f-family;
+  font-size: $s-body-text;
+  line-height: $s-body-text-line-height;
+}
+
+.fl-fr_divider {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}

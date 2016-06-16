@@ -22,7 +22,7 @@ export default class Post {
 
     const cssPrefix = `${modulePrefix}_${CSS_PREFIX}`;
     const postStr = `
-    <div class="${cssPrefix}-post">
+    <div class="${cssPrefix}">
       <div class="${cssPrefix}-header">
         <img class="${cssPrefix}-header-image"src="${reviewUserPic}" alt="">
         <div class="${cssPrefix}-header-text">

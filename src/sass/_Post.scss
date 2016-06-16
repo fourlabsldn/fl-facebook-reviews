@@ -16,9 +16,10 @@
   font-size: inherit;
   font-family: inherit;
   text-decoration: none;
+  line-height: inherit;
 }
 
-.fl-fr_Post-post {
+.fl-fr_Post {
   display: block;
   max-width: 470px;
   padding: $s-box-padding;
@@ -26,10 +27,6 @@
 
   background-color: $c-bg;
   border: 1px solid $c-border;
-
-  font-family: $f-family;
-  font-size: $s-body-text;
-  line-height: $s-body-text-line-height;
 }
 
 .fl-fr_Post-header {
