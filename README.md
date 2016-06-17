@@ -15,7 +15,7 @@ To use it you will need:
 # Install
 ## NPM
 ```
-npm install fl-multi-calendar-2 --save
+npm install fl-facebook-reviews --save
 ```
 
 ## Dependencies
