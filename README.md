@@ -2,7 +2,7 @@
 
 Show reviews for a page in facebook style
 
-- **[See demo]()**
+- **[See demo](https://fourlabsldn.github.io/fl-facebook-reviews)**
 To use it you will need:
 - [x-div](https://github.com/fourlabsldn/x-div) with fl-facebook-reviews as the controller
 - The CSS for the project (which is in the build folder)
