@@ -13,7 +13,8 @@
           align-items: flex-start;
   font-family: helvetica, arial, sans-serif;
   font-size: 14px;
-  line-height: 1.38em; }
+  line-height: 1.38em;
+  text-align: left; }
 
 .fl-fr_divider {
   display: block;

@@ -10,6 +10,7 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
+const DepLinker = require('dep-linker');
 
 const moduleName = 'fl-facebook-reviews';
 const paths = {
@@ -25,8 +26,13 @@ const paths = {
   },
   demo: {
     src: './demo',
+    dep: './demo/dependencies',
   },
 };
+
+gulp.task('copy-dependencies', () => {
+  return DepLinker.copyDependenciesTo(paths.demo.dep);
+});
 
 gulp.task('build:src', () => {
   gulp.src(paths.js.main)
