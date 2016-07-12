@@ -397,6 +397,7 @@ var Post = function () {
   function Post(review, modulePrefix) {
     _classCallCheck(this, Post);
 
+    console.log('review:', review);
     var reviewUserName = review.reviewer.name;
     var reviewUserUrl = 'https://www.facebook.com/' + review.reviewer.id;
     var reviewUserPic = review.reviewer.picture;
@@ -475,12 +476,14 @@ window.flFacebookReviews = function (xdiv) {
   leftColumn.classList.add(MODULE_PREFIX + '_leftColumn');
   xdiv.appendChild(leftColumn);
 
-  var facebookLogoBar = document.createElement('div');
+  var facebookLogoBar = document.createElement('a');
+  facebookLogoBar.setAttribute('href', loadedData.summary.url);
   facebookLogoBar.classList.add(MODULE_PREFIX + '_facebookLogoBar');
   facebookLogoBar.innerHTML = constants.facebookIcon;
   leftColumn.appendChild(facebookLogoBar);
 
-  var reviewsBar = document.createElement('div');
+  var reviewsBar = document.createElement('a');
+  reviewsBar.setAttribute('href', loadedData.summary.url);
   reviewsBar.classList.add(MODULE_PREFIX + '_reviewsBar');
   reviewsBar.innerHTML = 'Reviews <span>' + constants.arrowDownIcon + '</span>';
   leftColumn.appendChild(reviewsBar);

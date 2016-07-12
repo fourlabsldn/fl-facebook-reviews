@@ -19,12 +19,14 @@ window.flFacebookReviews = (xdiv) => {
   leftColumn.classList.add(`${MODULE_PREFIX}_leftColumn`);
   xdiv.appendChild(leftColumn);
 
-  const facebookLogoBar = document.createElement('div');
+  const facebookLogoBar = document.createElement('a');
+  facebookLogoBar.setAttribute('href', loadedData.summary.url);
   facebookLogoBar.classList.add(`${MODULE_PREFIX}_facebookLogoBar`);
   facebookLogoBar.innerHTML = constants.facebookIcon;
   leftColumn.appendChild(facebookLogoBar);
 
-  const reviewsBar = document.createElement('div');
+  const reviewsBar = document.createElement('a');
+  reviewsBar.setAttribute('href', loadedData.summary.url);
   reviewsBar.classList.add(`${MODULE_PREFIX}_reviewsBar`);
   reviewsBar.innerHTML = `Reviews <span>${constants.arrowDownIcon}</span>`;
   leftColumn.appendChild(reviewsBar);

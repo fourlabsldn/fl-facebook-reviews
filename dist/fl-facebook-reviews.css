@@ -24,25 +24,24 @@
 
 .fl-fr_postsContainer {
   -webkit-box-flex: 2;
-  -webkit-flex: 2 2;
-      -ms-flex: 2 2;
-          flex: 2 2;
-  min-width: 400px;
+  -webkit-flex: 2 2 350px;
+      -ms-flex: 2 2 350px;
+          flex: 2 2 350px;
   margin: 6px; }
 
 .fl-fr_leftColumn {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 2;
-      -ms-flex: 1 2;
-          flex: 1 2;
-  min-width: 210px;
+  -webkit-flex: 1 2 210px;
+      -ms-flex: 1 2 210px;
+          flex: 1 2 210px;
   margin: 6px; }
 
 .fl-fr_facebookLogoBar {
   display: block;
   background-color: #4254a0;
   margin: 0 0 6px;
-  padding: .4em 1em .05em; }
+  padding: .4em 1em .05em;
+  text-decoration: none; }
   .fl-fr_facebookLogoBar > svg {
     width: 1.6em;
     height: 1.6em; }
@@ -57,7 +56,8 @@
   text-transform: uppercase;
   border: 1px solid #d0d1d5;
   font-size: 9.52px;
-  line-height: 1.34em; }
+  line-height: 1.34em;
+  text-decoration: none; }
   .fl-fr_reviewsBar span {
     -webkit-transform: rotateZ(-90deg);
         -ms-transform: rotate(-90deg);

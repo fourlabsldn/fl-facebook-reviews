@@ -32,14 +32,12 @@
 }
 
 .fl-fr_postsContainer {
-  flex: 2 2;
-  min-width: 400px;
+  flex: 2 2 350px;
   margin: 6px;
 }
 
 .fl-fr_leftColumn {
-  flex: 1 2;
-  min-width: 210px;
+  flex: 1 2 210px;
   margin: 6px;
 }
 
@@ -48,6 +46,7 @@
   background-color: $c-link-text;
   margin: 0 0 6px;
   padding: .4em 1em .05em;
+  text-decoration: none;
 
   > svg {
     width: 1.6em;
@@ -66,6 +65,7 @@
   border: 1px solid $c-border;
   font-size: ($s-unconspicuouse-text * .8);
   line-height: $s-unconspicuouse-text-line-height;
+  text-decoration: none;
 
   span {
     transform: rotateZ(-90deg);
