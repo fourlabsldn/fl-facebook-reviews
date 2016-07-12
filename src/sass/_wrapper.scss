@@ -25,16 +25,56 @@
   font-family: $f-family;
   font-size: $s-body-text;
   line-height: $s-body-text-line-height;
+  justify-content: center;
   text-align: left;
-}
-
-.fl-fr_divider {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
+  max-width: 750px;
+  margin: auto;
 }
 
 .fl-fr_postsContainer {
+  flex: 2 2;
+  min-width: 400px;
+  margin: 6px;
+}
 
+.fl-fr_leftColumn {
+  flex: 1 2;
+  min-width: 210px;
+  margin: 6px;
+}
+
+.fl-fr_facebookLogoBar {
+  display: block;
+  background-color: $c-link-text;
+  margin: 0 0 6px;
+  padding: .4em 1em .05em;
+
+  > svg {
+    width: 1.6em;
+    height: 1.6em;
+  }
+}
+
+.fl-fr_reviewsBar {
+  position: relative;
+  display: block;
+  background-color: #e5e6ea;
+  color: $c-light-body-text;
+  margin: 6px 0;
+  padding: .8em $s-box-padding;
+  text-transform: uppercase;
+  border: 1px solid $c-border;
+  font-size: ($s-unconspicuouse-text * .8);
+  line-height: $s-unconspicuouse-text-line-height;
+
+  span {
+    transform: rotateZ(-90deg);
+    position: absolute;
+    right: 0;
+    top: .3em;
+  }
+
+  path {
+    fill: $c-light-body-text;
+  }
 }

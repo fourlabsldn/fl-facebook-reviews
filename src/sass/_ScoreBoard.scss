@@ -30,10 +30,8 @@
 
 .fl-fr_ScoreBoard {
   background-color: white;
-  width: 230px;
   padding: $s-scoreBoard-padding;
   border: 1px solid $c-border;
-  margin-bottom: 10px;
 }
 
 .fl-fr_ScoreBoard-header {
@@ -73,6 +71,7 @@
 
 .fl-fr_ScoreBoard-body-reviewCountStarScore-stars {
   padding-right: 1em;
+  font-size: $s-unconspicuouse-text;
 
   &::after {
     content: ' stars';

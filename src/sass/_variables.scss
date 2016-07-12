@@ -10,10 +10,10 @@ $c-border: #d0d1d5;
 // Sizes
 $s-body-text: 14px;
 $s-body-text-line-height: 1.38em;
-$s-unconspicuouse-text: 12px;
+$s-unconspicuouse-text: ($s-body-text * 0.85);
 $s-unconspicuouse-text-line-height: 1.34em;
-$s-box-padding: 12px;
-$s-scoreBoard-padding: 16px;
+$s-box-padding: ($s-body-text * 0.85);
+$s-scoreBoard-padding: ($s-body-text * 1.14);
 
 
 // Font

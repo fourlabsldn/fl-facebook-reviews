@@ -2,9 +2,10 @@
 /* eslint-disable quote-props, max-len*/
 import Post from './Post';
 import ScoreBoard from './ScoreBoard';
+import constants from './utils/constants';
 
 const MODULE_PREFIX = 'fl-fr';
-xController((xdiv) => {
+window.flFacebookReviews = (xdiv) => {
   let loadedData;
   try {
     loadedData = JSON.parse(xdiv.dataset.info);
@@ -14,12 +15,22 @@ xController((xdiv) => {
 
   xdiv.classList.add(MODULE_PREFIX);
 
-  const scoreBoard = new ScoreBoard(loadedData.summary, MODULE_PREFIX);
-  xdiv.appendChild(scoreBoard.getContainer());
+  const leftColumn = document.createElement('div');
+  leftColumn.classList.add(`${MODULE_PREFIX}_leftColumn`);
+  xdiv.appendChild(leftColumn);
 
-  const divider = document.createElement('div');
-  divider.classList.add(`${MODULE_PREFIX}_divider`);
-  xdiv.appendChild(divider);
+  const facebookLogoBar = document.createElement('div');
+  facebookLogoBar.classList.add(`${MODULE_PREFIX}_facebookLogoBar`);
+  facebookLogoBar.innerHTML = constants.facebookIcon;
+  leftColumn.appendChild(facebookLogoBar);
+
+  const reviewsBar = document.createElement('div');
+  reviewsBar.classList.add(`${MODULE_PREFIX}_reviewsBar`);
+  reviewsBar.innerHTML = `Reviews <span>${constants.arrowDownIcon}</span>`;
+  leftColumn.appendChild(reviewsBar);
+
+  const scoreBoard = new ScoreBoard(loadedData.summary, MODULE_PREFIX);
+  leftColumn.appendChild(scoreBoard.getContainer());
 
   const postsContainer = document.createElement('div');
   postsContainer.classList.add(`${MODULE_PREFIX}_postsContainer`);
@@ -29,4 +40,4 @@ xController((xdiv) => {
     const post = new Post(review, MODULE_PREFIX);
     postsContainer.appendChild(post.getContainer());
   });
-});
+}
