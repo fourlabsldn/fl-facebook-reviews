@@ -129,13 +129,14 @@
   fill: #90949c; }
 
 .fl-fr_Post-ExpansibleTextBox {
+  display: block;
   color: #1d2129;
   font-size: 14px;
   line-height: 1.38em; }
 
 .fl-fr_Post-ExpansibleTextBox-seeMore {
   color: #4254a0;
-  display: block;
+  display: inline-block;
   cursor: pointer; }
 
 .fl-fr_ScoreBoard,

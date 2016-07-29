@@ -91,6 +91,7 @@
 }
 
 .fl-fr_Post-ExpansibleTextBox {
+  display: block;
   color: $c-body-text;
   font-size: $s-body-text;
   line-height: $s-body-text-line-height;
@@ -98,6 +99,6 @@
 
 .fl-fr_Post-ExpansibleTextBox-seeMore {
   color: $c-link-text;
-  display: block;
+  display: inline-block;
   cursor: pointer;
 }
