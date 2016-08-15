@@ -12,7 +12,6 @@ export default class Post {
    * @return {HTMLElement}
    */
   constructor(review, modulePrefix) {
-    console.log('review:', review);
     const reviewUserName = review.reviewer.name;
     const reviewUserUrl = `https://www.facebook.com/${review.reviewer.id}`;
     const reviewUserPic = review.reviewer.picture;

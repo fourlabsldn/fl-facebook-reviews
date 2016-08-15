@@ -397,7 +397,6 @@ var Post = function () {
   function Post(review, modulePrefix) {
     _classCallCheck(this, Post);
 
-    console.log('review:', review);
     var reviewUserName = review.reviewer.name;
     var reviewUserUrl = 'https://www.facebook.com/' + review.reviewer.id;
     var reviewUserPic = review.reviewer.picture;
