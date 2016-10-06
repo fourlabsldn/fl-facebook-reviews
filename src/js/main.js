@@ -21,12 +21,14 @@ window.flFacebookReviews = (xdiv) => {
 
   const facebookLogoBar = document.createElement('a');
   facebookLogoBar.setAttribute('href', loadedData.summary.url);
+  facebookLogoBar.setAttribute('target', '_blank');
   facebookLogoBar.classList.add(`${MODULE_PREFIX}_facebookLogoBar`);
   facebookLogoBar.innerHTML = constants.facebookIcon;
   leftColumn.appendChild(facebookLogoBar);
 
   const reviewsBar = document.createElement('a');
   reviewsBar.setAttribute('href', loadedData.summary.url);
+  reviewsBar.setAttribute('target', '_blank');
   reviewsBar.classList.add(`${MODULE_PREFIX}_reviewsBar`);
   reviewsBar.innerHTML = `Reviews <span>${constants.arrowDownIcon}</span>`;
   leftColumn.appendChild(reviewsBar);

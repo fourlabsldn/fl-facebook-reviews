@@ -28,15 +28,15 @@ export default class Post {
         <img class="${cssPrefix}-header-image"src="${reviewUserPic}" alt="">
         <div class="${cssPrefix}-header-text">
           <span class="${cssPrefix}-header-text-top">
-            <a class="${cssPrefix}-header-text-top-name" href=${reviewUserUrl}>
+            <a class="${cssPrefix}-header-text-top-name" href=${reviewUserUrl} target="_blank">
               ${reviewUserName}
             </a>
             reviewed
-            <a class="${cssPrefix}-header-text-top-actionTarget" href="${slvUrl}">
+            <a class="${cssPrefix}-header-text-top-actionTarget" href="${slvUrl}" target="_blank">
               SLV
             </a>
               –
-            <a class="${cssPrefix}-header-text-stars" href="${slvReviewsUrl}">
+            <a class="${cssPrefix}-header-text-stars" href="${slvReviewsUrl}" target="_blank">
               ${reviewStars}
             </a>
           </span>

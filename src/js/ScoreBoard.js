@@ -14,7 +14,7 @@ export default class ScoreBoard {
     const cssPrefix = `${MODULE_PREFIX}_${CLASS_PREFIX}`;
     const scoreBoard = `<div class="${cssPrefix}">
       <div class="${cssPrefix}-header">
-        <a class="${cssPrefix}-header-mainScore" href=${pageUrl}>
+        <a class="${cssPrefix}-header-mainScore" href=${pageUrl} target="_blank">
           ${pageAverage}
         </a>
         <div class="${cssPrefix}-header-scoreDetails">
