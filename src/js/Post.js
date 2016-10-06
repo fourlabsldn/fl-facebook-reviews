@@ -11,15 +11,14 @@ export default class Post {
    * @param  {Object} review
    * @return {HTMLElement}
    */
-  constructor(review, modulePrefix) {
+  constructor(review, facebookPageUrl, modulePrefix) {
     const reviewUserName = review.reviewer.name;
     const reviewUserUrl = `//facebook.com/${review.reviewer.id}`;
     const reviewUserPic = `//graph.facebook.com/v2.8/${review.reviewer.id}/picture`;
     const reviewText = review.review_text;
     const reviewStars = review.rating;
     const reviewDate = review.created_time;
-    const slvUrl = 'https://www.facebook.com/slvglobal';
-    const slvReviewsUrl = `${slvUrl}/reviews`;
+    const reviewsUrl = `${facebookPageUrl}/reviews`;
 
     const cssPrefix = `${modulePrefix}_${CSS_PREFIX}`;
     const postStr = `
@@ -32,11 +31,11 @@ export default class Post {
               ${reviewUserName}
             </a>
             reviewed
-            <a class="${cssPrefix}-header-text-top-actionTarget" href="${slvUrl}" target="_blank">
+            <a class="${cssPrefix}-header-text-top-actionTarget" href="${facebookPageUrl}" target="_blank">
               SLV
             </a>
               –
-            <a class="${cssPrefix}-header-text-stars" href="${slvReviewsUrl}" target="_blank">
+            <a class="${cssPrefix}-header-text-stars" href="${reviewsUrl}" target="_blank">
               ${reviewStars}
             </a>
           </span>

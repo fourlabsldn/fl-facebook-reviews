@@ -41,7 +41,7 @@ window.flFacebookReviews = (xdiv) => {
   xdiv.appendChild(postsContainer);
 
   loadedData.reviews.forEach((review) => {
-    const post = new Post(review, MODULE_PREFIX);
+    const post = new Post(review, loadedData.summary.url, MODULE_PREFIX);
     postsContainer.appendChild(post.getContainer());
   });
-}
+};
