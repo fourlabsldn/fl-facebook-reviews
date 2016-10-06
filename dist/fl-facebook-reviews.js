@@ -490,8 +490,8 @@ var Post = function () {
     _classCallCheck(this, Post);
 
     var reviewUserName = review.reviewer.name;
-    var reviewUserUrl = 'https://www.facebook.com/' + review.reviewer.id;
-    var reviewUserPic = review.reviewer.picture;
+    var reviewUserUrl = '//facebook.com/' + review.reviewer.id;
+    var reviewUserPic = '//graph.facebook.com/v2.8/' + review.reviewer.id + '/picture';
     var reviewText = review.review_text;
     var reviewStars = review.rating;
     var reviewDate = review.created_time;

@@ -9,7 +9,7 @@ To use it you will need:
 - A configuration object
 
 ``` HTML
-<x-div data-controller="/build/fl-facebook-reviews" data-info="${json string}"></x-div>
+<x-div data-controller="/dist/fl-facebook-reviews" data-info="${json string}"></x-div>
 ```
 
 # Install

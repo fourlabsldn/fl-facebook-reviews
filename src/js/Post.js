@@ -13,8 +13,8 @@ export default class Post {
    */
   constructor(review, modulePrefix) {
     const reviewUserName = review.reviewer.name;
-    const reviewUserUrl = `https://www.facebook.com/${review.reviewer.id}`;
-    const reviewUserPic = review.reviewer.picture;
+    const reviewUserUrl = `//facebook.com/${review.reviewer.id}`;
+    const reviewUserPic = `//graph.facebook.com/v2.8/${review.reviewer.id}/picture`;
     const reviewText = review.review_text;
     const reviewStars = review.rating;
     const reviewDate = review.created_time;
