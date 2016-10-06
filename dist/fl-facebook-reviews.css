@@ -182,7 +182,8 @@
 .fl-fr_Post-ExpansibleTextBox-seeMore {
   color: #4254a0;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-left: .3em; }
 
 .fl-fr_ScoreBoard,
 .fl-fr_ScoreBoard-header,

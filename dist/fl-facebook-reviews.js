@@ -460,10 +460,10 @@ var ExpansibleTextBox = function () {
     value: function toggleExpand() {
       if (this.expanded) {
         this.textBox.textContent = this.trimText(this.text);
-        this.seeMoreBtn.textContent = 'See More';
+        this.seeMoreBtn.textContent = 'See more';
       } else {
         this.textBox.textContent = this.text;
-        this.seeMoreBtn.textContent = 'See Less';
+        this.seeMoreBtn.textContent = 'See less';
       }
       this.expanded = !this.expanded;
     }
