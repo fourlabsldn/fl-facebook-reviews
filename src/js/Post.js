@@ -27,7 +27,7 @@ export default class Post {
         <img class="${cssPrefix}-header-image"src="${reviewUserPic}" alt="">
         <div class="${cssPrefix}-header-text">
           <span class="${cssPrefix}-header-text-top">
-            <a class="${cssPrefix}-header-text-top-name" href=${reviewUserUrl} target="_blank">
+            <a class="${cssPrefix}-header-text-top-name">
               ${reviewUserName}
             </a>
             reviewed

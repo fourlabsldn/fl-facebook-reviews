@@ -1,3 +1,7 @@
+function interopDefault(ex) {
+	return ex && typeof ex === 'object' && 'default' in ex ? ex['default'] : ex;
+}
+
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
 }
@@ -14,60 +18,7 @@ exports.default = function (instance, Constructor) {
 };
 });
 
-var _classCallCheck = (classCallCheck && typeof classCallCheck === 'object' && 'default' in classCallCheck ? classCallCheck['default'] : classCallCheck);
-
-var _core = createCommonjsModule(function (module) {
-var core = module.exports = {version: '2.4.0'};
-if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
-});
-
-var require$$2 = (_core && typeof _core === 'object' && 'default' in _core ? _core['default'] : _core);
-
-var _fails = createCommonjsModule(function (module) {
-module.exports = function(exec){
-  try {
-    return !!exec();
-  } catch(e){
-    return true;
-  }
-};
-});
-
-var require$$1 = (_fails && typeof _fails === 'object' && 'default' in _fails ? _fails['default'] : _fails);
-
-var _descriptors = createCommonjsModule(function (module) {
-// Thank's IE8 for his funny defineProperty
-module.exports = !require$$1(function(){
-  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
-});
-});
-
-var require$$0$2 = (_descriptors && typeof _descriptors === 'object' && 'default' in _descriptors ? _descriptors['default'] : _descriptors);
-
-var _isObject = createCommonjsModule(function (module) {
-module.exports = function(it){
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
-};
-});
-
-var require$$0$3 = (_isObject && typeof _isObject === 'object' && 'default' in _isObject ? _isObject['default'] : _isObject);
-
-var _toPrimitive = createCommonjsModule(function (module) {
-// 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = require$$0$3;
-// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-// and the second argument - flag - preferred type is a string
-module.exports = function(it, S){
-  if(!isObject(it))return it;
-  var fn, val;
-  if(S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-  if(typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it)))return val;
-  if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
-  throw TypeError("Can't convert object to primitive value");
-};
-});
-
-var require$$1$1 = (_toPrimitive && typeof _toPrimitive === 'object' && 'default' in _toPrimitive ? _toPrimitive['default'] : _toPrimitive);
+var _classCallCheck = interopDefault(classCallCheck);
 
 var _global = createCommonjsModule(function (module) {
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -76,84 +27,25 @@ var global = module.exports = typeof window != 'undefined' && window.Math == Mat
 if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 });
 
-var require$$3 = (_global && typeof _global === 'object' && 'default' in _global ? _global['default'] : _global);
+var _global$1 = interopDefault(_global);
 
-var _domCreate = createCommonjsModule(function (module) {
-var isObject = require$$0$3
-  , document = require$$3.document
-  // in old IE typeof document.createElement is 'object'
-  , is = isObject(document) && isObject(document.createElement);
-module.exports = function(it){
-  return is ? document.createElement(it) : {};
-};
+
+var require$$0$2 = Object.freeze({
+  default: _global$1
 });
 
-var require$$0$4 = (_domCreate && typeof _domCreate === 'object' && 'default' in _domCreate ? _domCreate['default'] : _domCreate);
-
-var _ie8DomDefine = createCommonjsModule(function (module) {
-module.exports = !require$$0$2 && !require$$1(function(){
-  return Object.defineProperty(require$$0$4('div'), 'a', {get: function(){ return 7; }}).a != 7;
-});
+var _core = createCommonjsModule(function (module) {
+var core = module.exports = {version: '2.4.0'};
+if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 });
 
-var require$$2$2 = (_ie8DomDefine && typeof _ie8DomDefine === 'object' && 'default' in _ie8DomDefine ? _ie8DomDefine['default'] : _ie8DomDefine);
+var _core$1 = interopDefault(_core);
+var version = _core.version;
 
-var _anObject = createCommonjsModule(function (module) {
-var isObject = require$$0$3;
-module.exports = function(it){
-  if(!isObject(it))throw TypeError(it + ' is not an object!');
-  return it;
-};
+var require$$2$1 = Object.freeze({
+	default: _core$1,
+	version: version
 });
-
-var require$$3$1 = (_anObject && typeof _anObject === 'object' && 'default' in _anObject ? _anObject['default'] : _anObject);
-
-var _objectDp = createCommonjsModule(function (module, exports) {
-var anObject       = require$$3$1
-  , IE8_DOM_DEFINE = require$$2$2
-  , toPrimitive    = require$$1$1
-  , dP             = Object.defineProperty;
-
-exports.f = require$$0$2 ? Object.defineProperty : function defineProperty(O, P, Attributes){
-  anObject(O);
-  P = toPrimitive(P, true);
-  anObject(Attributes);
-  if(IE8_DOM_DEFINE)try {
-    return dP(O, P, Attributes);
-  } catch(e){ /* empty */ }
-  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
-  if('value' in Attributes)O[P] = Attributes.value;
-  return O;
-};
-});
-
-var require$$2$1 = (_objectDp && typeof _objectDp === 'object' && 'default' in _objectDp ? _objectDp['default'] : _objectDp);
-
-var _propertyDesc = createCommonjsModule(function (module) {
-module.exports = function(bitmap, value){
-  return {
-    enumerable  : !(bitmap & 1),
-    configurable: !(bitmap & 2),
-    writable    : !(bitmap & 4),
-    value       : value
-  };
-};
-});
-
-var require$$1$2 = (_propertyDesc && typeof _propertyDesc === 'object' && 'default' in _propertyDesc ? _propertyDesc['default'] : _propertyDesc);
-
-var _hide = createCommonjsModule(function (module) {
-var dP         = require$$2$1
-  , createDesc = require$$1$2;
-module.exports = require$$0$2 ? function(object, key, value){
-  return dP.f(object, key, createDesc(1, value));
-} : function(object, key, value){
-  object[key] = value;
-  return object;
-};
-});
-
-var require$$0$5 = (_hide && typeof _hide === 'object' && 'default' in _hide ? _hide['default'] : _hide);
 
 var _aFunction = createCommonjsModule(function (module) {
 module.exports = function(it){
@@ -162,11 +54,16 @@ module.exports = function(it){
 };
 });
 
-var require$$0$6 = (_aFunction && typeof _aFunction === 'object' && 'default' in _aFunction ? _aFunction['default'] : _aFunction);
+var _aFunction$1 = interopDefault(_aFunction);
+
+
+var require$$0$3 = Object.freeze({
+  default: _aFunction$1
+});
 
 var _ctx = createCommonjsModule(function (module) {
 // optional / simple context binding
-var aFunction = require$$0$6;
+var aFunction = interopDefault(require$$0$3);
 module.exports = function(fn, that, length){
   aFunction(fn);
   if(that === undefined)return fn;
@@ -187,13 +84,192 @@ module.exports = function(fn, that, length){
 };
 });
 
-var require$$1$3 = (_ctx && typeof _ctx === 'object' && 'default' in _ctx ? _ctx['default'] : _ctx);
+var _ctx$1 = interopDefault(_ctx);
 
-var _export = createCommonjsModule(function (module, exports) {
-var global    = require$$3
-  , core      = require$$2
-  , ctx       = require$$1$3
-  , hide      = require$$0$5
+
+var require$$1 = Object.freeze({
+  default: _ctx$1
+});
+
+var _isObject = createCommonjsModule(function (module) {
+module.exports = function(it){
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+});
+
+var _isObject$1 = interopDefault(_isObject);
+
+
+var require$$0$5 = Object.freeze({
+  default: _isObject$1
+});
+
+var _anObject = createCommonjsModule(function (module) {
+var isObject = interopDefault(require$$0$5);
+module.exports = function(it){
+  if(!isObject(it))throw TypeError(it + ' is not an object!');
+  return it;
+};
+});
+
+var _anObject$1 = interopDefault(_anObject);
+
+
+var require$$3 = Object.freeze({
+  default: _anObject$1
+});
+
+var _fails = createCommonjsModule(function (module) {
+module.exports = function(exec){
+  try {
+    return !!exec();
+  } catch(e){
+    return true;
+  }
+};
+});
+
+var _fails$1 = interopDefault(_fails);
+
+
+var require$$0$6 = Object.freeze({
+  default: _fails$1
+});
+
+var _descriptors = createCommonjsModule(function (module) {
+// Thank's IE8 for his funny defineProperty
+module.exports = !interopDefault(require$$0$6)(function(){
+  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
+});
+});
+
+var _descriptors$1 = interopDefault(_descriptors);
+
+
+var require$$2$4 = Object.freeze({
+  default: _descriptors$1
+});
+
+var _domCreate = createCommonjsModule(function (module) {
+var isObject = interopDefault(require$$0$5)
+  , document = interopDefault(require$$0$2).document
+  // in old IE typeof document.createElement is 'object'
+  , is = isObject(document) && isObject(document.createElement);
+module.exports = function(it){
+  return is ? document.createElement(it) : {};
+};
+});
+
+var _domCreate$1 = interopDefault(_domCreate);
+
+
+var require$$0$7 = Object.freeze({
+  default: _domCreate$1
+});
+
+var _ie8DomDefine = createCommonjsModule(function (module) {
+module.exports = !interopDefault(require$$2$4) && !interopDefault(require$$0$6)(function(){
+  return Object.defineProperty(interopDefault(require$$0$7)('div'), 'a', {get: function(){ return 7; }}).a != 7;
+});
+});
+
+var _ie8DomDefine$1 = interopDefault(_ie8DomDefine);
+
+
+var require$$2$3 = Object.freeze({
+  default: _ie8DomDefine$1
+});
+
+var _toPrimitive = createCommonjsModule(function (module) {
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = interopDefault(require$$0$5);
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function(it, S){
+  if(!isObject(it))return it;
+  var fn, val;
+  if(S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
+  if(typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it)))return val;
+  if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+});
+
+var _toPrimitive$1 = interopDefault(_toPrimitive);
+
+
+var require$$1$1 = Object.freeze({
+  default: _toPrimitive$1
+});
+
+var _objectDp = createCommonjsModule(function (module, exports) {
+var anObject       = interopDefault(require$$3)
+  , IE8_DOM_DEFINE = interopDefault(require$$2$3)
+  , toPrimitive    = interopDefault(require$$1$1)
+  , dP             = Object.defineProperty;
+
+exports.f = interopDefault(require$$2$4) ? Object.defineProperty : function defineProperty(O, P, Attributes){
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if(IE8_DOM_DEFINE)try {
+    return dP(O, P, Attributes);
+  } catch(e){ /* empty */ }
+  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
+  if('value' in Attributes)O[P] = Attributes.value;
+  return O;
+};
+});
+
+var _objectDp$1 = interopDefault(_objectDp);
+var f = _objectDp.f;
+
+var require$$2$2 = Object.freeze({
+  default: _objectDp$1,
+  f: f
+});
+
+var _propertyDesc = createCommonjsModule(function (module) {
+module.exports = function(bitmap, value){
+  return {
+    enumerable  : !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable    : !(bitmap & 4),
+    value       : value
+  };
+};
+});
+
+var _propertyDesc$1 = interopDefault(_propertyDesc);
+
+
+var require$$1$2 = Object.freeze({
+  default: _propertyDesc$1
+});
+
+var _hide = createCommonjsModule(function (module) {
+var dP         = interopDefault(require$$2$2)
+  , createDesc = interopDefault(require$$1$2);
+module.exports = interopDefault(require$$2$4) ? function(object, key, value){
+  return dP.f(object, key, createDesc(1, value));
+} : function(object, key, value){
+  object[key] = value;
+  return object;
+};
+});
+
+var _hide$1 = interopDefault(_hide);
+
+
+var require$$0$4 = Object.freeze({
+  default: _hide$1
+});
+
+var _export = createCommonjsModule(function (module) {
+var global    = interopDefault(require$$0$2)
+  , core      = interopDefault(require$$2$1)
+  , ctx       = interopDefault(require$$1)
+  , hide      = interopDefault(require$$0$4)
   , PROTOTYPE = 'prototype';
 
 var $export = function(type, name, source){
@@ -253,35 +329,52 @@ $export.R = 128; // real proto method for `library`
 module.exports = $export;
 });
 
-var require$$2$3 = (_export && typeof _export === 'object' && 'default' in _export ? _export['default'] : _export);
+var _export$1 = interopDefault(_export);
 
-var es6_object_defineProperty = createCommonjsModule(function (module) {
-var $export = require$$2$3;
-// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !require$$0$2, 'Object', {defineProperty: require$$2$1.f});
+
+var require$$2 = Object.freeze({
+  default: _export$1
 });
 
-var defineProperty$1 = createCommonjsModule(function (module) {
-var $Object = require$$2.Object;
+var es6_object_defineProperty = createCommonjsModule(function (module) {
+var $export = interopDefault(require$$2);
+// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+$export($export.S + $export.F * !interopDefault(require$$2$4), 'Object', {defineProperty: interopDefault(require$$2$2).f});
+});
+
+interopDefault(es6_object_defineProperty);
+
+var defineProperty$2 = createCommonjsModule(function (module) {
+var $Object = interopDefault(require$$2$1).Object;
 module.exports = function defineProperty(it, key, desc){
   return $Object.defineProperty(it, key, desc);
 };
 });
 
-var require$$0$1 = (defineProperty$1 && typeof defineProperty$1 === 'object' && 'default' in defineProperty$1 ? defineProperty$1['default'] : defineProperty$1);
+var defineProperty$3 = interopDefault(defineProperty$2);
 
-var defineProperty = createCommonjsModule(function (module) {
-module.exports = { "default": require$$0$1, __esModule: true };
+
+var require$$0$1 = Object.freeze({
+  default: defineProperty$3
 });
 
-var require$$0 = (defineProperty && typeof defineProperty === 'object' && 'default' in defineProperty ? defineProperty['default'] : defineProperty);
+var defineProperty = createCommonjsModule(function (module) {
+module.exports = { "default": interopDefault(require$$0$1), __esModule: true };
+});
+
+var defineProperty$1 = interopDefault(defineProperty);
+
+
+var require$$0 = Object.freeze({
+	default: defineProperty$1
+});
 
 var createClass = createCommonjsModule(function (module, exports) {
 "use strict";
 
 exports.__esModule = true;
 
-var _defineProperty = require$$0;
+var _defineProperty = interopDefault(require$$0);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -306,7 +399,7 @@ exports.default = function () {
 }();
 });
 
-var _createClass = (createClass && typeof createClass === 'object' && 'default' in createClass ? createClass['default'] : createClass);
+var _createClass = interopDefault(createClass);
 
 var constants = {
    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -393,7 +486,6 @@ var Post = function () {
    * @param  {Object} review
    * @return {HTMLElement}
    */
-
   function Post(review, facebookPageUrl, modulePrefix) {
     _classCallCheck(this, Post);
 
@@ -406,7 +498,7 @@ var Post = function () {
     var reviewsUrl = facebookPageUrl + '/reviews';
 
     var cssPrefix = modulePrefix + '_' + CSS_PREFIX;
-    var postStr = '\n    <div class="' + cssPrefix + '">\n      <div class="' + cssPrefix + '-header">\n        <img class="' + cssPrefix + '-header-image"src="' + reviewUserPic + '" alt="">\n        <div class="' + cssPrefix + '-header-text">\n          <span class="' + cssPrefix + '-header-text-top">\n            <a class="' + cssPrefix + '-header-text-top-name" href=' + reviewUserUrl + ' target="_blank">\n              ' + reviewUserName + '\n            </a>\n            reviewed\n            <a class="' + cssPrefix + '-header-text-top-actionTarget" href="' + facebookPageUrl + '" target="_blank">\n              SLV\n            </a>\n              –\n            <a class="' + cssPrefix + '-header-text-stars" href="' + reviewsUrl + '" target="_blank">\n              ' + reviewStars + '\n            </a>\n          </span>\n          <span class="' + cssPrefix + '-header-text-bottom">\n            ' + constants.monthNames[new Date(reviewDate).getMonth()] + '\n            ' + new Date(reviewDate).getDate() + '\n            <span class="' + cssPrefix + '-header-text-globe">' + constants.globeIcon + '</span>\n          </span>\n        </div>\n        <span class="' + cssPrefix + '-header-arrowDown">' + constants.arrowDownIcon + '</span>\n      </div>\n    </div>';
+    var postStr = '\n    <div class="' + cssPrefix + '">\n      <div class="' + cssPrefix + '-header">\n        <img class="' + cssPrefix + '-header-image"src="' + reviewUserPic + '" alt="">\n        <div class="' + cssPrefix + '-header-text">\n          <span class="' + cssPrefix + '-header-text-top">\n            <a class="' + cssPrefix + '-header-text-top-name">\n              ' + reviewUserName + '\n            </a>\n            reviewed\n            <a class="' + cssPrefix + '-header-text-top-actionTarget" href="' + facebookPageUrl + '" target="_blank">\n              SLV\n            </a>\n              \u2013\n            <a class="' + cssPrefix + '-header-text-stars" href="' + reviewsUrl + '" target="_blank">\n              ' + reviewStars + '\n            </a>\n          </span>\n          <span class="' + cssPrefix + '-header-text-bottom">\n            ' + constants.monthNames[new Date(reviewDate).getMonth()] + '\n            ' + new Date(reviewDate).getDate() + '\n            <span class="' + cssPrefix + '-header-text-globe">' + constants.globeIcon + '</span>\n          </span>\n        </div>\n        <span class="' + cssPrefix + '-header-arrowDown">' + constants.arrowDownIcon + '</span>\n      </div>\n    </div>';
 
     var post = compile(postStr);
     var reviewTextBox = new ExpansibleTextBox(reviewText, maxCharacters, cssPrefix);
